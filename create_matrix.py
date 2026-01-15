@@ -54,6 +54,7 @@ LINUX_MATRIX = {
         "2.9.1",
     ],
     "cuda-version": [
+        "11.8", 
         "12.4",
         # "12.6",
         "12.8",
@@ -81,7 +82,7 @@ LINUX_ARM64_MATRIX = {
         # "2.8.0",
         "2.9.1",
     ],
-    "cuda-version": [
+    "cuda-version": [        
         "12.4",
         # "12.6",
         "12.8",
@@ -111,6 +112,7 @@ LINUX_SELF_HOSTED_MATRIX = {
         # "2.9.1",
     ],
     "cuda-version": [
+        "11.8", 
         "12.4",
         "12.6",
         "12.8",
@@ -230,8 +232,8 @@ def main():
     print(
         json.dumps(
             {
-                "linux": False,
-                # "linux": LINUX_MATRIX,
+                # "linux": False,
+                "linux": LINUX_MATRIX,
                 #
                 "linux_arm64": False,
                 # "linux_arm64": LINUX_ARM64_MATRIX,
@@ -245,8 +247,8 @@ def main():
                 "windows": False,
                 # "windows": WINDOWS_MATRIX,
                 #
-                # "windows_self_hosted": False,
-                "windows_self_hosted": WINDOWS_SELF_HOSTED_MATRIX,
+                "windows_self_hosted": False,
+                # "windows_self_hosted": WINDOWS_SELF_HOSTED_MATRIX,
                 #
                 "windows_code_build": False,
                 # "windows_code_build": WINDOWS_CODEBUILD_MATRIX,
